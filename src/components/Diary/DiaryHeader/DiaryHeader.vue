@@ -1,10 +1,10 @@
 <template>
-
+  <div><h4>我是DiaryHeader</h4></div>
 </template>
 
 <script>
   export default {
-    name: 'carousel'
+    name: 'diary-header'
   }
 </script>
 

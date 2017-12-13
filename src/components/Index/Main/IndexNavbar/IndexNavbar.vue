@@ -1,5 +1,6 @@
 <template>
   <div class="navall">
+    <h3>我是IndexNavbar</h3>
     <u-l-b-g></u-l-b-g>
     <side-bar></side-bar>
   </div>

@@ -49,7 +49,7 @@
     name: 'index-header',
     data () {
       return {
-        logo: '/src/assets/img/login/logo.png'
+        logo: './assets/img/logo.png'
       }
     },
     components: {

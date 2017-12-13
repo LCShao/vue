@@ -1,12 +1,17 @@
 <template>
   <div id="app">
     <router-view/>
+    <index-footer></index-footer>
   </div>
 </template>
 
 <script>
+  import IndexFooter from '@/components/IndexFooter'
 export default {
-  name: 'app'
+    name: 'app',
+    components: {
+      IndexFooter
+    }
 }
 </script>
 

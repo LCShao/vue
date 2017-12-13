@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import { getAllSkills } from '../../../services/index.service'
+  import { getAllSkills } from '../../../../services/index.service'
 
   export default {
     name: 'side-bar',
@@ -73,7 +73,7 @@
             height:26px;
             margin:0 8px;
             margin-top:5px;
-            background:url("../../../assets/img/images/menu_i_bg_new.png");
+            background:url("../../../../assets/img/images/menu_i_bg_new.png");
           }
           span{
             display:inline-block;

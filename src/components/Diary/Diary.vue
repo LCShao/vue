@@ -1,16 +1,17 @@
 <template>
   <div>
-    <index-header></index-header>
+  <h3>我是Diary</h3>
+    <diary-header></diary-header>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import IndexHeader from '@/components/Index/IndexHeader/IndexHeader'
+  import DiaryHeader from '@/components/Diary/DiaryHeader/DiaryHeader'
   export default {
-    name: 'index',
+    name: 'diary',
     components: {
-      IndexHeader
+      DiaryHeader
     }
   }
 </script>
