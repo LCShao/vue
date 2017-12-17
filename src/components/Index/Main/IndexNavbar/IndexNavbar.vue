@@ -1,14 +1,13 @@
 <template>
   <div class="navall">
-    <h3>我是IndexNavbar</h3>
     <u-l-b-g></u-l-b-g>
     <side-bar></side-bar>
   </div>
 </template>
 
 <script>
-  import ULBG from './ULBG'
-  import SideBar from './SideBar'
+  import ULBG from '@/components/Index/Main/IndexNavbar/ULBG'
+  import SideBar from '@/components/Index/Main/IndexNavbar/SideBar'
   export default {
     name: 'index-navbar',
     components: {

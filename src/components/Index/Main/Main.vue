@@ -1,14 +1,13 @@
 <template>
   <div class="main">
-  <h3>首页内容Main</h3>
     <index-navbar></index-navbar>
     <carousel></carousel>
   </div>
 </template>
 
 <script>
-  import IndexNavbar from './IndexNavbar/IndexNavbar'
-  import Carousel from './Carousel'
+  import IndexNavbar from '@/components/Index/Main/IndexNavbar/IndexNavbar'
+  import Carousel from '@/components/Index/Main/Carousel'
   export default {
     name: 'main',
     components: {

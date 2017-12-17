@@ -1,5 +1,17 @@
 <template>
-<h4>广告轮播</h4>
+  <div id="box">
+    <img src="imgs/1.jpg" alt="1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </template>
 
 <script>
@@ -8,6 +20,6 @@
   }
 </script>
 
-<style scoped>
+<style lang="less">
 
 </style>

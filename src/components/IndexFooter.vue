@@ -36,7 +36,7 @@
     </div>
     <div class="conn">
       <h3>关注我们</h3>
-      <img src="@/assets/img/picture/8482.png" width='87px' /><br>
+      <img src="src/assets/img/picture/8482.png" width='87px' /><br>
       <span>关注新氧公众号</span>
       <p><i></i><b></b></p>
     </div>
@@ -78,18 +78,18 @@
             margin-right: 10px;
             background: url("../assets/img/images/img.png");
           }
-          :nth-child(1) > i {
-            background-position: 241px 0px;
-          }
-          :nth-child(2) > i {
-            background-position: 60px 0px;
-          }
-          :nth-child(3) > i {
-            background-position: 181px 0px;
-          }
-          :nth-child(4) > i {
-            background-position: 121px 0px;
-          }
+        }
+        li:nth-child(1) > i {
+          background-position: 241px 0px;
+        }
+        li:nth-child(2) > i {
+          background-position: 60px 0px;
+        }
+        li:nth-child(3) > i {
+          background-position: 181px 0px;
+        }
+        li:nth-child(4) > i {
+          background-position: 121px 0px;
         }
       }
       div:nth-child(1)~div{
