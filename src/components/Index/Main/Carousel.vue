@@ -1,6 +1,6 @@
 <template>
-  <div class="box">
-    <img :src="src">
+  <div class="box" :style="{width}">
+    <img :src="src" :style="{width}">
     <div v-for="i in classes.length" :class="{'shake':classes[i]}" :style="bgStyles[i]"></div>
   </div>
 </template>
@@ -12,17 +12,19 @@
     name: 'carousel',
     data () {
       return {
+        width: innerWidth + 'px',
+        rate: innerWidth < 1920 ? innerWidth / 1920 : 1,
         i: 0,
         canShake: true,
         timer: null,
-        classes: [false, false, false, false, false, false, false, false, false, false],
+        classes: [],
         src: '',
         bgStyles: [],
         imgs: null
       }
     },
     mounted () {
-      var n = Math.floor(innerWidth / 100)
+      var n = Math.ceil(innerWidth / 100) + 1
       for (var i = 0; i < n; i++) {
         this.classes.push(false)
       }
@@ -31,7 +33,9 @@
         this.bgStyles = []
         for (var i = 0; i < this.classes.length; i++) {
           this.bgStyles.push({
-            backgroundImage: 'url(' + require('../../../assets/' + this.imgs[this.i].img) + ')'
+            backgroundImage: 'url(' + require('../../../assets/' + this.imgs[this.i].img) + ')',
+            height: 380 * this.rate + 'px',
+            backgroundSize: 1920 * this.rate + 'px ' + 380 * this.rate + 'px'
           })
         }
         this.src = 'src/assets/' + this.imgs[0].img
@@ -58,7 +62,9 @@
           var j = 0
           var timer = setInterval(() => {
             this.bgStyles[arr[j]] = {
-              backgroundImage: 'url(' + require('../../../assets/' + this.imgs[this.i].img) + ')'
+              backgroundImage: 'url(' + require('../../../assets/' + this.imgs[this.i].img) + ')',
+              height: 380 * this.rate + 'px',
+              backgroundSize: 1920 * this.rate + 'px ' + 380 * this.rate + 'px'
             }
             this.classes.splice(arr[j], 1, true)
             j++
@@ -83,10 +89,10 @@
 
 <style lang="less">
   .box{
-    width:100%; height:380px;
+    height:380px;
     position:relative;
     div{
-      width:100px; height:380px;
+      width:100px;
       position:absolute; top:0;
     }
     div:nth-child(2){
