@@ -22,3 +22,11 @@ export const getAllSkills = () => {
       })
   })
 }
+export const getCarouselImgs = () => {
+  return new Promise(resolve => {
+    axios.get(`${baseHost}/index/banner.php`)
+      .then(res => {
+        resolve(res.data)
+      })
+  })
+}

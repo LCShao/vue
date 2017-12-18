@@ -25,11 +25,14 @@
     background:-webkit-linear-gradient(left,#80BFFE,#4FF0C8);
     width:100%;
     height:50px;
+    position:absolute;
     .banner-ul{
+      position:absolute;
+      top:0; left:50%; margin-left:-480px;
       z-index:50;
       .selected{
         background:#70B1E2;
-      }
+    }
     }
   }
 </style>

@@ -19,15 +19,16 @@
 <style lang="less">
   .navall{
     width:100%;
+    height:50px;
     margin:0 auto;
     position:relative;
     ul{
       width:960px;
       height:50px;
-      margin:0 auto;
       position:absolute;
       top:0px;
-      left:145px;
+      left:50%;
+      margin-left:-480px;
       background:-webkit-linear-gradient(left,#80BFFE,#4FF0C8);
       li{
         float:left;

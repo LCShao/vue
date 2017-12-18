@@ -51,12 +51,16 @@
   .sidebar{
     position:absolute;
     z-index:10;
+    width:960px;
     top:50px;
+    left:50%;
+    margin-left:-480px;
     ul{
       background:#fff;
       width:200px;
       height:380px;
-      position:relative;
+      position:absolute;
+      top:0; left:50%; margin-left:-480px;
       li{
         height:38px;
         line-height:38px;
