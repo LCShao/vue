@@ -43,7 +43,7 @@ export default new Router({
       ]
     },
     {
-      path: '/login/:back',
+      path: '/login',
       name: 'Login',
       meta: { title: '登录' },
       component: Login
