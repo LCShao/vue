@@ -36,7 +36,7 @@
     </div>
     <div class="conn">
       <h3>关注我们</h3>
-      <img src="src/assets/img/picture/8482.png" width='87px' /><br>
+      <img src="/static/img/picture/8482.png" width='87px' /><br>
       <span>关注新氧公众号</span>
       <p><i></i><b></b></p>
     </div>
@@ -76,7 +76,7 @@
             width: 60px;
             height: 60px;
             margin-right: 10px;
-            background: url("../assets/img/images/img.png");
+            background: url("/static/img/images/img.png");
           }
         }
         li:nth-child(1) > i {
@@ -136,7 +136,7 @@
         display:inline-block;
         width:42px;
         height:42px;
-        background:url("../assets/img/images/img.png");
+        background:url("/static/img/images/img.png");
         margin-bottom:-8px;
       }
       div:nth-child(4) .i1{
@@ -150,7 +150,7 @@
         width:30px;
         height:30px;
         margin-top:10px;
-        background:url("../assets/img/images/img.png");
+        background:url("/static/img/images/img.png");
       }
       .conn p i{
         background-position:355px 0px;

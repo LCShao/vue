@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import { getCarouselImgs } from '../../../services/index.service'
+  import { getCarouselImgs } from '@/services/index.service'
 
   export default {
     name: 'carousel',
@@ -33,12 +33,12 @@
         this.bgStyles = []
         for (var i = 0; i < this.classes.length; i++) {
           this.bgStyles.push({
-            backgroundImage: 'url(' + require('../../../assets/' + this.imgs[this.i].img) + ')',
+            backgroundImage: 'url(/static/' + this.imgs[this.i].img + ')',
             height: 380 * this.rate + 'px',
             backgroundSize: 1920 * this.rate + 'px ' + 380 * this.rate + 'px'
           })
         }
-        this.src = 'src/assets/' + this.imgs[0].img
+        this.src = '/static/' + this.imgs[0].img
         this.timer = setInterval(this.shake.bind(this), 3000)
       })
     },
@@ -62,7 +62,7 @@
           var j = 0
           var timer = setInterval(() => {
             this.bgStyles[arr[j]] = {
-              backgroundImage: 'url(' + require('../../../assets/' + this.imgs[this.i].img) + ')',
+              backgroundImage: 'url(/static/' + this.imgs[this.i].img + ')',
               height: 380 * this.rate + 'px',
               backgroundSize: 1920 * this.rate + 'px ' + 380 * this.rate + 'px'
             }
@@ -74,7 +74,7 @@
             for (var i = 0; i < this.classes.length; i++) {
               this.classes.splice(i, 1, false)
             }
-            this.src = 'src/assets/' + this.imgs[this.i].img
+            this.src = '/static/' + this.imgs[this.i].img
             this.canShake = true
           }, 30 * this.classes.length + 300)
         }

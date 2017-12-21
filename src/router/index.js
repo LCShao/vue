@@ -18,7 +18,7 @@ export default new Router({
   base: __dirname,
   routes: [
     {
-      path: '/',
+      path: '/index',
       name: 'Index',
       component: Index,
       children: [
@@ -36,7 +36,7 @@ export default new Router({
         },
         {
           name: 'ProductDetails',
-          path: 'product-details/:id',
+          path: 'product-details',
           meta: { title: '商品详情' },
           component: ProductDetails
         }
@@ -56,28 +56,29 @@ export default new Router({
         {
           name: 'DiaryMain',
           path: 'diary-main',
-          meta: { title: '美丽日记' },
+          meta: {title: '美丽日记'},
           component: DiaryMain
         },
         {
           name: 'DiaryByItem',
           path: 'diary-by-item',
-          meta: { title: '按项目查询日记' },
+          meta: {title: '按项目查询日记'},
           component: DiaryByItem
         },
         {
           name: 'Doctors',
           path: 'doctors',
-          meta: { title: '查询医生' },
+          meta: {title: '查询医生'},
           component: Doctors
         },
         {
           name: 'EditDiary',
           path: 'edit-diary',
-          meta: { title: '编辑日记' },
+          meta: {title: '编辑日记'},
           component: EditDiary
         }
       ]
-    }
+    },
+    {path: '/', redirect: '/index/main'}
   ]
 })

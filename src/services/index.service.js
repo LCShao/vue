@@ -3,7 +3,7 @@ import { baseHost } from './config'
 
 export const getAllSkills = () => {
   return new Promise(resolve => {
-    axios.get(`${baseHost}/index/getAllSkills.php`)
+    axios.get(`${baseHost}index/getAllSkills.php`)
       .then(res => {
         for (var skill of res.data) {
           skill.isHover = false
@@ -24,7 +24,7 @@ export const getAllSkills = () => {
 }
 export const getCarouselImgs = () => {
   return new Promise(resolve => {
-    axios.get(`${baseHost}/index/banner.php`)
+    axios.get(`${baseHost}index/banner.php`)
       .then(res => {
         resolve(res.data)
       })

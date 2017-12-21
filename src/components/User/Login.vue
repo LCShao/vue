@@ -28,7 +28,7 @@
     name: 'login',
     data () {
       return {
-        loginBg: 'src/assets/img/login/loginbg.jpg',
+        loginBg: '/static/img/login/loginbg.jpg',
         uname: 'jingjing',
         upwd: '123456',
         error: '',

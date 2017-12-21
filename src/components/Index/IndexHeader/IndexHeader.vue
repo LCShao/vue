@@ -30,7 +30,7 @@
       </ul>
     </div>
     <div class="head">
-      <img :src="logo"/>
+      <img src="/static/img/login/logo.png"/>
       <head-center></head-center>
       <div class="conr">
         <i></i>
@@ -47,11 +47,6 @@
   import HeadCenter from '@/components/Index/IndexHeader/HeadCenter'
   export default {
     name: 'index-header',
-    data () {
-      return {
-        logo: 'src/assets/img/login/logo.png'
-      }
-    },
     components: {
       UserStatus, HeadCenter
     }
@@ -85,7 +80,7 @@
               width:14px;
               height:15px;
               margin-bottom:-3px;
-              background-image:url("../../../assets/img/images/img.png");
+              background-image:url("/static/img/images/img.png");
             }
             .i1{
               background-position:-55px -1px;
@@ -101,7 +96,7 @@
             .i4{
               width:9px;
               height:13px;
-              background-image:url("../../../assets/img/images/xyapp.png");
+              background-image:url("/static/img/images/xyapp.png");
             }
             span{
               margin-left:30px;
@@ -129,7 +124,7 @@
           float:left;
           width:42px;
           height:42px;
-          background:url("../../../assets/img/images/img.png");
+          background:url("/static/img/images/img.png");
           background-position:-249px 0px;
         }
         p{
