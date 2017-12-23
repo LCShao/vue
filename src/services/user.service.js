@@ -5,7 +5,7 @@ import qs from 'querystring'
 export const login = (uname, upwd) => {
   return new Promise(resolve => {
     axios.post(
-      `${baseHost}index/login.php`,
+      `${baseHost}/users/login`,
       qs.stringify({uname, upwd}),
       {
         headers: {
@@ -21,7 +21,7 @@ export const login = (uname, upwd) => {
 export const isLogin = () => {
   return new Promise(resolve => {
     axios.get(
-      `${baseHost}index/isLogin.php`, {
+      `${baseHost}/users/islogin`, {
         withCredentials: true
       }
     ).then(res => {
@@ -31,7 +31,7 @@ export const isLogin = () => {
 }
 export const logout = () => {
   return new Promise(resolve => {
-    axios.get(`${baseHost}index/logout.php`, {
+    axios.get(`${baseHost}/users/logout`, {
       withCredentials: true
     }).then(res => {
       resolve(res.data)
