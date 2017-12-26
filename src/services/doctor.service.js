@@ -3,7 +3,7 @@ import { baseHost } from './config'
 
 export const queryDoctor = () => {
   return new Promise(resolve => {
-    axios.get(`${baseHost}/doctor/queryDoctor.php`)
+    axios.get(`${baseHost}/doctors/query`)
       .then(res => {
         resolve(res.data)
       })

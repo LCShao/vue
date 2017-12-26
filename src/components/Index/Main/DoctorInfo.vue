@@ -75,6 +75,9 @@
           perspective:1000px;/*视距*/
           transform-style:preserve-3d;/*让父元素变为3d效果的容器*/
           a{
+            position:absolute;
+            left:50%; top:50%;
+            margin-left:-33px; margin-top:-33px;
             z-index:10;
             display:inline-block;
             width:66px; height:66px;
@@ -85,6 +88,7 @@
             img{
               transform:translateZ(5px);
             }
+            p{text-align:center; font-size:.8em}
             span:nth-child(2){
               color: #9f9f9f;
               line-height: 16px;
