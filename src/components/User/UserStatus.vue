@@ -19,7 +19,6 @@
     },
     mounted () {
       isLogin().then(data => {
-        console.log(data)
         if (data.ok === 1) {
           this.isLog = true
           this.uname = data.uname
@@ -31,10 +30,9 @@
     },
     methods: {
       logout: function () {
-        logout().then(() => {
-          this.isLog = false
-          this.uname = ''
-        })
+        logout()
+        this.isLog = false
+        this.uname = ''
       }
     }
   }

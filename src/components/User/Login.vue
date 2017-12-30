@@ -42,6 +42,7 @@
       login: function () {
         login(this.uname, this.upwd).then(data => {
           if (data.code === 1) {
+            sessionStorage.setItem('token', data.token)
             this.$router.push(this.redirect)
           } else {
             alert(data.msg)

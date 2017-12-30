@@ -10,8 +10,7 @@ export const login = (uname, upwd) => {
       {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        withCredentials: true
+        }
       }
     ).then(res => {
       resolve(res.data)
@@ -20,21 +19,15 @@ export const login = (uname, upwd) => {
 }
 export const isLogin = () => {
   return new Promise(resolve => {
-    axios.get(
-      `${baseHost}/users/islogin`, {
-        withCredentials: true
+    axios.get(`${baseHost}/users/islogin`, {
+      headers: {
+        'x-access-token': sessionStorage.getItem('token')
       }
-    ).then(res => {
+    }).then(res => {
       resolve(res.data)
     })
   })
 }
 export const logout = () => {
-  return new Promise(resolve => {
-    axios.get(`${baseHost}/users/logout`, {
-      withCredentials: true
-    }).then(res => {
-      resolve(res.data)
-    })
-  })
+  sessionStorage.clear()
 }
